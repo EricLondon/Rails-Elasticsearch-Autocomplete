@@ -82,3 +82,5 @@ curl -s 'http://localhost:3000/api/people/auto_complete?q=eric' | python -m json
     }
 ]
 ```
+
+The guts of the elasticsearch integration code exist in the [Person model](https://github.com/EricLondon/Rails-Elasticsearch-Autocomplete/blob/master/app/models/person.rb).
