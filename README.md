@@ -1,24 +1,29 @@
-# README
+# Rails Elasticsearch Autocomplete
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Frontend: Elasticsearch Angular Autocomplete](https://github.com/EricLondon/Elasticsearch-Angular-Autocomplete)
 
-Things you may want to cover:
+Setup:
+```
 
-* Ruby version
+# install/run elasticsearch
+brew install elasticsearch
+brew services start elasticsearch
 
-* System dependencies
+# checkout project
+git clone git@github.com:EricLondon/Rails-Elasticsearch-Autocomplete.git
+cd Rails-Elasticsearch-Autocomplete
 
-* Configuration
+# install gems
+bundle install
 
-* Database creation
+# setup database
+rake db:create && rake db:migrate
 
-* Database initialization
+# create elasticsearch index via rails console
+rails c
+> Person.__elasticsearch__.create_index! force: true
 
-* How to run the test suite
+# create sample data
+rake import:people
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
