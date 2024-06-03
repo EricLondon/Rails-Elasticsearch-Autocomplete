@@ -24,7 +24,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~> 3.0.5'
+  gem 'listen', '~> 3.9.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
